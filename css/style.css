@@ -1090,8 +1090,8 @@
     margin-bottom: 10px !important;
     margin-left: 15px !important;
   }
-  .example-forms__list__item__down-bar__price-with-icon .example-forms__list__item__down-bar {
-    flex-wrap: wrap;
+  .example-forms__list__item__down-bar {
+    flex-wrap: wrap !important;
   }
 }
 .example-forms__list__item__down-bar__button--blue {
