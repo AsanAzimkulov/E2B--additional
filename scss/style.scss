@@ -1,0 +1,32 @@
+/// // main site styles
+// @import './main.scss';
+
+// Welcome chain styles
+
+// Global (containers, vars etc.)
+
+@import './global/variables.scss';
+
+@import './global/containers.scss';
+
+@import './global/helpers.scss';
+
+@import './global/page.scss';
+
+@import './global/uikit.scss';
+
+@import './blocks/header.scss';
+
+// Welcome Chain Blocks
+@import './blocks/service-scheme.scss';
+@import './blocks/modal-preview.scss';
+
+// Main Blocks(Используются на главной, но могут быть взяты там из других страниц)
+@import './blocks/example-forms.scss';
+@import './blocks/services.scss';
+
+
+// Page blocks
+
+@import './blocks/cms-blocks.scss';
+@import './blocks/unique-abilities.scss';

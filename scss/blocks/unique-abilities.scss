@@ -1,0 +1,80 @@
+.unique-abilities {
+  color: $black;
+  @include standart-section-spacing;
+  &__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+  }
+
+  &__lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    &__list{
+      @include item-spacing(20px);
+      &-wrapper{
+
+      }
+      &__title{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0px;
+    &__item{
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      @include tick-bullet-black;
+      padding-left: 40px !important;
+      @include item-spacing(10px);
+    }
+  }
+  @media(min-width: 768px){
+    &__title{
+      margin-bottom: 30px;
+      font-size: 36px;
+      line-height: 41px;
+    }
+    &__lists{
+      &__list{
+        @include item-spacing(30px);
+        &__title{
+          font-size: 22px;
+          line-height: 27px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__list{
+      &__item{
+        font-size: 18px;
+        line-height: 22px;
+        @include item-spacing(17px);
+      }
+    }
+  }
+  @media(min-width: 1200px){
+    &__lists{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      grid-column-gap: 108px;
+    }
+    &__list{
+      margin: 0px;
+    }
+  }
+}
+
