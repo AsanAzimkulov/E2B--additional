@@ -25,12 +25,22 @@
       &__body{
         position: relative;
         overflow: hidden;
+        text-align: center;
+        height: 100%;
+        @media(min-width: 768px){
+          display: flex;
+          align-content: center;
+          justify-content: center;
+        }
+        .cms-blocks__list__item__image{
+          opacity: 0.4;
+        }
         &:hover{
           .cms-blocks__list__item__image{
-            opacity: 0.4;
+            opacity: 1;
           }
         }
-        &:hover::after{
+        &::after{
           content: '';
           top: 0px;
           left: 0px;
@@ -40,10 +50,16 @@
           height: 100%;
           background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
           border-radius: 20px;
+          @media(min-width: 768px){
+            border-radius: 30px;
+          }
+        }
+
+        &:hover::after{
+          content: normal;
         }
       }
       &__image{
-        width: 100%;
       }
       &--panel{
         cursor: auto;

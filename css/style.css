@@ -2507,11 +2507,23 @@
 .cms-blocks__list__item__body {
   position: relative;
   overflow: hidden;
+  text-align: center;
+  height: 100%;
 }
-.cms-blocks__list__item__body:hover .cms-blocks__list__item__image {
+@media (min-width: 768px) {
+  .cms-blocks__list__item__body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+.cms-blocks__list__item__body .cms-blocks__list__item__image {
   opacity: 0.4;
 }
-.cms-blocks__list__item__body:hover::after {
+.cms-blocks__list__item__body:hover .cms-blocks__list__item__image {
+  opacity: 1;
+}
+.cms-blocks__list__item__body::after {
   content: "";
   top: 0px;
   left: 0px;
@@ -2522,8 +2534,13 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   border-radius: 20px;
 }
-.cms-blocks__list__item__image {
-  width: 100%;
+@media (min-width: 768px) {
+  .cms-blocks__list__item__body::after {
+    border-radius: 30px;
+  }
+}
+.cms-blocks__list__item__body:hover::after {
+  content: normal;
 }
 .cms-blocks__list__item--panel {
   cursor: auto;
